@@ -1,7 +1,4 @@
-/*
- * Hi Simon! I changed the port from 8080 to 8443, and used a keystore and encrypted things :)
- * - Doaa
- */
+
 
 package ca.sheridancollege.shaikhdo.controllers;
 
