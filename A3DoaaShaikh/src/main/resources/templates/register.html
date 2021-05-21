@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Account Registration</title>
+<script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+</head>
+<body style="background-color: #f8f3fa; color: #292b26; font-family: Verdana">
+<h1>Account Registration</h1>
+<p>Please enter your email address and desired password below, they'll be saved in Kimchi Inc.'s internal database.</p><br>
+<br>
+<div id="error" class="error"></div>
+<form name="form" action="#" th:action="@{/register}" method="post" onsubmit="return verify()">
+Email: <input type="email" name="username" /><BR>
+Password: <input type="password" name="password"/><BR>
+Verify Password: <input type="password" name="verifyPassword"/><BR>
+<input type="submit" value="Create Account">
+</form>
+<br>
+<br>
+<strong>Navigation:</strong>
+<p><a href="/" th:href="@{/secure}">Kimchi Inc. Home Page</a></p>
+<p><a href="#" th:href="@{/logout}">Sign out</a></p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Kimchi Inc. Secured Corporate Portal</title>
+</head>
+<body style="background-color: #f8f3fa; color: #292b26; font-family: Verdana">
+<h1>Welcome to Kimchi Inc.'s SECURE Corporate Portal</h1>
+<br>
+<strong>You are signed in as:</strong><br><br>
+
+Email:[[${email}]]<br>
+Roles:
+<ul>
+<li th:each="role : ${roleList}" th:text=${role}></li></ul><br>
+<br>
+
+<strong>Navigation:</strong>
+<p><a href="/" th:href="@{/}">Kimchi Inc. Home Page</a></p>
+<p><a href="/secure/ui-discussion" th:href="@{/secure/ui-discussion}">UI Discussion Forum</a></p>
+<p><a href="#" th:href="@{/logout}">Sign out</a></p>
+
+</body>
+</html>
